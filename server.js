@@ -18,9 +18,12 @@ const { Schema } = mongoose;
 const blogSchema = new Schema({
   title:  String 
 });
+
 const Blog = mongoose.model('Blog', blogSchema);
 app.get('/user',async(req,res)=>{
-    res.json('server going on route /')
+    const result = Blog.find({});
+    console.log(result);
+    res.json(result)
 })
 app.post('/user',async(req,res)=>{
      const name = {title:'abdul malek'}

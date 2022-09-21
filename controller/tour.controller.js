@@ -7,9 +7,9 @@ exports.getTour = async (req, res, next) => {
   
     try {
       
-        const query = req.query.fields.split(',').join(' ');
+        // const query = req.query.fields.split(',').join(' ');
       
-        const result = await getToursService(query);
+        const result = await getToursService( );
         res.status(200).json({
             status: 'successfull',
             message: 'find tour',

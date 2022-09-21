@@ -1,7 +1,7 @@
 const Tour = require("../models/TourSchema");
 
-exports.getToursService = async (query) =>{
-    const result = await Tour.find({}).skip().limit(5).select(query).sort('price')
+exports.getToursService = async () =>{
+    const result = await Tour.find({});
     
      return result;
 }
